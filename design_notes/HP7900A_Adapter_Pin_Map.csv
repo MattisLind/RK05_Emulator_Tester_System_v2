@@ -1,0 +1,28 @@
+hp_signal,direction,hp_p1_reference,hp_p2_reference,hp_p3,emu_edge,m993gw_header,fpga_port,fpga_pin,hp_alias,connection
+Outbus 0,HP to emulator,18,V,2,A-K1,J2-20,BUS_CYL_ADD_L[0],136,HP_OUTBUS_N[0],Direct logic line with HP termination
+Outbus 1,HP to emulator,19,W,A,A-D1,J2-4,BUS_CYL_ADD_L[1],122,HP_OUTBUS_N[1],Direct logic line with HP termination
+Outbus 2,HP to emulator,20,X,S,A-L1,J2-24,BUS_CYL_ADD_L[2],137,HP_OUTBUS_N[2],Direct logic line with HP termination
+Outbus 3,HP to emulator,21,Y,3,A-C1,J2-2,BUS_CYL_ADD_L[3],121,HP_OUTBUS_N[3],Direct logic line with HP termination
+Outbus 4,HP to emulator,,18,H,A-F1,J2-8,BUS_CYL_ADD_L[4],129,HP_OUTBUS_N[4],Direct logic line with HP termination
+Outbus 5,HP to emulator,22,Z,J,A-J1,J2-16,BUS_CYL_ADD_L[5],135,HP_OUTBUS_N[5],Direct logic line with HP termination
+Outbus 6,HP to emulator,23,AA,K,A-E1,J2-6,BUS_CYL_ADD_L[6],128,HP_OUTBUS_N[6],Direct logic line with HP termination
+Outbus 7,HP to emulator,24,BB,D,A-H1,J2-12,BUS_CYL_ADD_L[7],134,HP_OUTBUS_N[7],Direct logic line with HP termination
+Select 1,HP to emulator,T,,F,A-J2,J2-18,BUS_SEL_DR_L[0],101,HP_SELECT_N[0],Direct logic line with HP termination
+Select 2,HP to emulator,S,,E,A-K2,J2-22,BUS_SEL_DR_L[1],102,HP_SELECT_N[1],Direct logic line with HP termination
+Set Cylinder,HP to emulator,,19,C,B-H1,J1-5,BUS_STROBE_L,88,HP_SET_CYLINDER_N,Direct logic line with HP termination
+Set Head and Sector,HP to emulator,,17,B,B-M2,J1-21,BUS_HEAD_SELECT_L,93,HP_SET_HEAD_N,Direct logic line with HP termination
+Control,HP to emulator,13,P,1,B-R1,J1-31,BUS_RD_GATE_L,90,HP_CONTROL_N,Direct logic line with HP termination
+Inbus 0,Emulator to HP,4,,V,B-L1,J1-15,BUS_SEC_CNTR_L[0],79,HP_INBUS_N[0],Existing open-collector output
+Inbus 1,Emulator to HP,5,,W,A-P2,J2-32,BUS_SEC_CNTR_L[1],52,HP_INBUS_N[1],Existing open-collector output
+Inbus 2,Emulator to HP,H,,T,B-K2,J1-13,BUS_SEC_CNTR_L[2],63,HP_INBUS_N[2],Existing open-collector output
+Inbus 3,Emulator to HP,8,,U,B-J1,J1-9,BUS_SEC_CNTR_L[3],81,HP_INBUS_N[3],Existing open-collector output; P1-J discrepancy noted in wiring document
+Inbus 4,Emulator to HP,10,,R,A-B1,J2-1,BUS_SEC_CNTR_L[4],73,HP_INBUS_N[4],Existing v2 fifth-sector output
+Drive Ready,Emulator to HP,M,,X,B-N1,J1-23,BUS_FILE_READY_L,62,HP_DRIVE_READY_N,Existing open-collector output
+Access Ready,Emulator to HP,N,,P,A-H2,J2-14,BUS_RWS_RDY_L,107,HP_ACCESS_READY_N,Existing open-collector output
+Sector Pulse,Emulator to HP,V,,M,B-N2,J1-25,BUS_SEC_PLS_L,64,HP_SECTOR_PULSE_N,Existing open-collector output
+Sector Compare,Emulator to HP,U,,N,A-R2,J2-34,BUS_ADDRESS_ACCEPTED_L,106,HP_SECTOR_COMPARE_N,Existing open-collector output
+FM Data 1,Bidirectional,,21,Y,,,,,HP_DATA1,Differential receiver and sender only
+FM Data 2,Bidirectional,,20,Z;22,,,,,HP_DATA2,Differential receiver and sender only; Z and 22 are the same cable net
+FM receiver output,Adapter to emulator,,,,A-F2,J2-10,BUS_WT_DATA_CLK_L,99,HP_FM_RX_N,Adapter single-ended receiver output to existing input buffer
+FM sender pulse input,Emulator to adapter,,,,B-S2,J1-37,BUS_RD_DATA_L,58,HP_FM_TX_N,Existing open-collector output to adapter logic
+FM sender enable,Emulator to adapter,,,,B-K1,J1-11,BUS_WT_CHK_L,80,HP_TX_ENABLE_N,Existing open-collector output; adapter must default sender disabled
